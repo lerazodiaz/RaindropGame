@@ -24,3 +24,9 @@ void draw() {
     r.reset();                           //if it does, reset the raindrop
   }
 }
+
+
+
+
+
+  

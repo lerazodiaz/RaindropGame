@@ -10,7 +10,7 @@ class Raindrop {
   }
 
   void display() {
-    fill(0, 0, 255);
+    fill(157, 205, 214);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
@@ -21,12 +21,12 @@ class Raindrop {
   }
 
   void reset() {
-    loc.y = 0;
+    loc.y = 0; 
     vel.set(0, 9);
   }
 
   boolean isInContactWith(PVector c) {
-    float d = dist(loc.x, loc.y, c.x, c.y);
+    float d = dist(c.loc)<diam/2 + c.diam/2;
     boolean e;
     if (d< diam/2) {
       e = true ;

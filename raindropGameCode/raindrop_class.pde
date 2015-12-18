@@ -25,10 +25,10 @@ class Raindrop {
     vel.set(0, 9);
   }
 
-  boolean isInContactWith(PVector c) {
-    float d = dist(c.loc)<diam/2 + c.diam/2;
+  boolean isInContactWith(Catcher bucket) {
+    float d = loc.dist(bucket.loc);
     boolean e;
-    if (d< diam/2) {
+    if (d< diam/2+ bucket.diam) {
       e = true ;
     } else {
       e = false;

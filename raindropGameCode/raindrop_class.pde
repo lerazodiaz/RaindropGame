@@ -1,18 +1,19 @@
 class Raindrop {
   PVector loc, vel, acc;
   float diam;
+  PImage trash;
 
   Raindrop(float x, float y) {
     loc = new PVector(x, y);
-    vel =new PVector(random(-2, 2), random(-2, 2));
+    vel =new PVector(random(0, 2), random(0, 2));
     acc= new PVector(0.0001, .00002);
     diam = 30;
+    trash = loadImage("trash.jpg");
   }
 
   void display() {
-    fill(40, 49, 56);
-    noStroke();
-    ellipse(loc.x, loc.y, diam, diam);
+    image(trash, loc.x, loc.y);
+   
   }
 
   void fall() {

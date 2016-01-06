@@ -1,10 +1,10 @@
-PImage beach;
+PImage beach;    //image for background
 PVector mouse;   //declare a P
 int count = 100;
 //Raindrop [] r = new Raindrop[count];      //declare a new Raindrop called r
 ArrayList<Raindrop> drops = new ArrayList<Raindrop>();    //declare & initialize Array list
 Catcher c;
-int score;
+int score;    
 float start;
 
 
@@ -17,29 +17,29 @@ void setup() {
   start = 1; 
   size(1200, 800);
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
-  c= new Catcher(100);
-  beach = loadImage ("beach.jpg");
-  drops.add(new Raindrop(mouseX, mouseY));
+  c= new Catcher(100);    //initialize catcher
+  beach = loadImage ("beach.jpg");    //load background image
+  
 }
 
 
-void draw() {    //startscreen 
-  if (start==1) {
+void draw() {    //function for startscreen 
+  if (start==1) {    
     background(207, 87, 110);
     textSize(40);
     text("Clean Up the Beach!", width/2, 200);
     text("Click the Mouse to Start", width/2-100, 300);
-    if (mousePressed == true) {
+    if (mousePressed == true) {    // if the mouse is pressed
       start = 2;
     }
   }
-  if (start == 2) {
+  if (start == 2) {    //the game starts
     game();
   }
 }
 
 
-void game() {
+void game() {    //function for game
 
   textSize(32);    //text size
   text("Clean the Beach", width/2, height/2);
@@ -47,7 +47,7 @@ void game() {
   background(63, 83, 87);
   image(beach, 0, 0);
 
-  drops.add(new Raindrop(mouseX, mouseY));
+  drops.add(new Raindrop(random(width), 0));    //
 
   for (int i = drops.size()-1; i >= 0; i--) {
     Raindrop r = drops.get(i);

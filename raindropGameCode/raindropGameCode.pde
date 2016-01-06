@@ -16,7 +16,7 @@ void setup() {
   start = 1; 
   size(1200, 800);
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
-  c= new Catcher(150);
+  c= new Catcher(100);
   beach = loadImage ("beach.jpg");
   for (int i= 0; i < count; i++) { 
     r[i] = new Raindrop (random(width), random(-height, 0));

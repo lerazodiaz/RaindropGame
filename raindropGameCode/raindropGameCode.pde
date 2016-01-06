@@ -6,6 +6,7 @@ Catcher c;
 int score;
 float start;
 
+
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
 // You can start out by just using the single Raindrop as you test

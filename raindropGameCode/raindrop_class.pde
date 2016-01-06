@@ -5,12 +5,12 @@ class Raindrop {
   Raindrop(float x, float y) {
     loc = new PVector(x, y);
     vel =new PVector(random(-2, 2), random(-2, 2));
-    acc= new PVector(0.0001,.00002);
+    acc= new PVector(0.0001, .00002);
     diam = 30;
   }
 
   void display() {
-    fill(40,49,56);
+    fill(40, 49, 56);
     noStroke();
     ellipse(loc.x, loc.y, diam, diam);
   }
@@ -33,7 +33,6 @@ class Raindrop {
     } else {
       e = false;
     }
-      return e;
-    }
-    
+    return e;
   }
+}

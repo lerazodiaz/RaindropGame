@@ -8,7 +8,7 @@ class Catcher {
   }
 
   void display() {
-    fill(178,175,214);
+    fill(178, 175, 214);
     ellipse(loc.x, loc.y, diam, diam);
   }
   void update() {

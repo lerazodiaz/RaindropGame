@@ -49,7 +49,7 @@ void game() {    //function for game
 
   drops.add(new Raindrop(random(width), 0));    //
 
-  for (int i = drops.size()-1; i >= 0; i--) {
+  for (int i = drops.size()-1; i >= 0; i--) {    
     Raindrop r = drops.get(i);
     r.fall();         //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
     r.display();      //display the raindrop
@@ -61,17 +61,17 @@ void game() {    //function for game
       score+=1;      // add 1 to score
     }
   }
-  c.display();
+  c.display();    //display the catcher
   c.update();
   textSize(32);
   fill(0);
   text(score, width/2, 700);
   if (score > 150) {    //when score is more than 100
-    gamedone(); //
+    gamedone(); //    //go to gamedone functions
   }
 }
 
-void gamedone() {
+void gamedone() {    //gamedone function, game over screen 
   background (0);
   textSize(45);
   fill(255);

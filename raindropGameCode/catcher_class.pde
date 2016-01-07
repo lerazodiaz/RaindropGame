@@ -1,5 +1,5 @@
-class Catcher {
-  int diam;
+class Catcher {    //create catcher class
+  int diam;    
   PVector loc;
 
   Catcher(int tDiam) {
@@ -7,11 +7,11 @@ class Catcher {
     diam= tDiam;
   }
 
-  void display() {
+  void display() {    //display function to use w/in catcher class
     fill(178, 175, 214);
     ellipse(loc.x, loc.y, diam, diam);
   }
-  void update() {
+  void update() {      //update function to use w/in catcher class
     loc.set(mouseX, mouseY);
   }
 }

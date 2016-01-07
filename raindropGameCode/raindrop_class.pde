@@ -1,4 +1,4 @@
-class Raindrop {
+class Raindrop {    //create raindrop class
   PVector loc, vel, acc;
   float diam;
   PImage trash;
